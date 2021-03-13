@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>App - Elimine os Zumbis</title>
+		<meta charset="utf-8">
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="../estilo.css">
+		<script src="../jogo.js"></script>
+	</head>
+
+	<body onresize="ajustaTamanhoPalcoJogo()">
+		<div class="painel"> <!-- Inicio Painel -->
+			<div class="vidas">
+				<img id="v1" src="../imagens/coracao_cheio.png">
+				<img id="v2" src="../imagens/coracao_cheio.png">
+				<img id="v3" src="../imagens/coracao_cheio.png">
+			</div>
+			
+			<div class="cronometro">
+				Tempo restante <span id="cronometro"></span>
+			</div>
+		</div><!-- Fim Painel -->
+
+		<script>
+			//Posiciona no span a contagem do cronometro
+			document.getElementById('cronometro').innerHTML = tempo
+			//Executa em um intervalo de tempo a função de criação
+			var criaZombie = setInterval(	
+				function(){posicaoRandomica()}, criaZombieTempo)
+		</script>
+	</body>
+</html>
